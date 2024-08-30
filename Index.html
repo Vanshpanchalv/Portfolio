@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vansh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8c4569df52.js" crossorigin="anonymous"></script>
+    <script>
+        /*----------nav--------*/
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+        /*--------about--------*/
+        var tablinks = document.getElementsByClassName("tab-links");
+    var tabcon = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (var tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (var tabcontent of tabcon) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div id="logo"><h1><span class="mname">V</span>ansh.</h1></div>
+        <ul id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="nav-icon" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <!-- Home Section -->
+    <div id="home">
+        <div id="img"></div>
+        <div id="name">
+            <p>Hii <span id="emoji">👋</span>, my name is <span class="mname">Vansh Panchal</span></p>
+            <p>I am a Java full stack Developer</p>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div id="ab"><p>About Me</p></div>
+        <div id="abm">
+            <div id="abmg"></div>
+            <div id="info">
+                <div id="aboutme"><p>Hii, I am Vansh Panchal, a passionate Java full stack developer with experience in building dynamic web applications. I enjoy solving complex problems and constantly strive to improve my skills and knowledge. In my spare time, I love exploring new technologies and contributing to open-source projects.</p></div>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                  <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Technology</span><br>HTML, CSS, Java Script, Bootstrap</li>
+                    <li><span>Programming Language</span><br>C, C++, Java</li>
+                    <li><span>Java Technology</span><br>JDBC, Servlet ,JSP</li>
+                    <li><span>Frameworks & Libraries</span><br>Spring Boot, Hibernate </li>
+                    <li><span>Database</span><br>MySql, Orecle</li>
+                    <li><span>Other</span><br> Data Structures and Algorithms (DSA), Git</li>
+                </ul>
+                   
+                  </div>
+                  <div class="tab-contents"id="experience">
+                    <ul>
+                        <li><span>Internship
+                        </span><br><br>Internship of Six Months as a Software Developer intern<br>Ypsilon IT Solutions Pvt.Ltd</li>
+                        <li><span><br>Freelancing</span><br><br>Doing Freelancing from last Four Months on Online Plateforms</li>
+                    </ul>
+                    </div>
+                    <div class="tab-contents "id="education">
+                        <ul>
+                            <li><span>Current pursuing (Bcom)</span><br>Shri Vaishnav College of Commerce<br>
+                            Indore(M.P)
+                            </li>
+                            <li><span><br>Higher Education (12th) - 2022</span><br>Shri Vaishnav Higher Secondary School<br>
+                            Indore(M.P)</li>
+                            <li><span><br>Secondry Education (10th) - 2020</span><br>Shri Vaishnav Higher Secondary School<br>
+                                Indore(M.P)</li> 
+                        </ul>
+                         </div>
+            </div>
+        </div>
+    </div>
+    <!---------------sevices----------------->
+<div id="services"><div class="servi"><p class="job-title">My Services</p></div>
+<div class="services-list">
+    <div class="con">
+        <div class="icon">
+        <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <span>Web Applications</span>
+        <p>Custom, scalable web applications tailored to your needs. Expertise in e-commerce, SPAs, PWAs, and enterprise solutions, prioritizing security, performance, and user experience.
+        </p>
+    </div>
+    <div class="con">
+        <div class="icon">
+        <i class="fa-regular fa-window-restore"></i>
+        </div>
+        <span>Enterprise Application</span>
+        <p>Custom enterprise applications designed to streamline operations, enhance productivity, and support scalability. We prioritize security, integration, and performance for robust business solutions.
+        </p>
+    </div>
+    <div class="con">
+        <div class="icon">
+        <i class="fa-regular fa-file-code"></i>
+        </div>
+        <span>Web sites</span>
+        <p>Specialize in crafting captivating websites tailored to your needs, including e-commerce platforms, sleek portfolios, and dynamic corporate sites that drive engagement and deliver exceptional user experiences.
+        </p>
+    </div>
+</div>
+</div>
+
+<!----------------portfolio----------------->
+<div id="projects">
+    <div class="servi">
+        <p class="pro-title">Projects</p>
+    </div>
+    <div id="project-list">
+        <div class="pro">
+            <img src="gift-shop-ad-vector-pile-present-box-commercial-announcement-invitation-retail-shopping-illustration-121409110.jpg">
+            <div class="layer">
+                <h3>Gift shop website</h3>
+                <p>A gift shop website that offers a curated selection of unique and thoughtful gifts, simplifies the gift-giving process with easy navigation and personalized recommendations, and brings joy to both givers and recipients by making every occasion special and memorable.</p>
+                <i class="fa-solid fa-up-right-from-square"></i>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="online-shopping-brochure-template-layout-on-demand-services-flyer-booklet-print-design-with-linear-illustrations-e-commerce-page-layout-for-magazine-annual-report-advertising-poster-vector.jpg">
+            <div class="layer">
+                <h3>E-commerce Application</h3>
+                <p>An e-commerce app that revolutionizes shopping by providing a convenient and user-friendly platform, empowers businesses by expanding their reach, and supports consumers with secure, efficient transactions and a wide variety of products, all while driving economic growth and innovation.
+                </p>
+                <i class="fa-solid fa-up-right-from-square"></i>
+            </div>
+        </div>
+        <div class="pro">
+            <img src="music-festival-poster-with-classical-guitar-vector.jpg">
+            <div class="layer">
+                <h3>Music Web Application</h3>
+                <p>A music web application that enhances user experience through seamless streaming, fosters global connections by sharing diverse musical genres, and supports artists by providing a platform for creative expression and discovery.
+                </p>
+                <i class="fa-solid fa-up-right-from-square"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Contact----------------->
+<div id="contact">
+    <div id="ccontact">
+        <div id="contactInfo">
+            <div>
+                <h1 class="pro-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>vanshpanchal376@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9630989986</p>
+                <div id="so-icon">
+                    <a href="https://github.com/Vanshpanchalv"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/vanshpanchal____"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vansh-panchal-152a1026b/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Vansh Panchal(Resume).pdf" download id="btn">Download CV</a>
+            </div>
+        </div>
+        <div id="contactDetails">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHAO6ezKOqklwsZDVKlrcqwheD4ui7JxgmYg--VzE0_dLZukzYp-ONBF0PsM0W8SaSAw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>

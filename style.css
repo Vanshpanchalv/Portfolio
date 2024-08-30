@@ -1,0 +1,725 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(55, 43, 84);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(180, 11, 104);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#logo {
+    width: 150px;
+}
+
+.mname {
+    color: rgb(233, 151, 242);
+}
+
+#nav-icon {
+    display: none; /* Hide icon by default */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(55, 43, 84);
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        padding: 20px 0;
+        z-index: 1;
+    }
+
+    nav ul.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    #nav-icon {
+        display: block; /* Show icon only on small screens */
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
+/* Home Section */
+#home {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+}
+
+#img {
+    background-image: url("account-icon-lg.png");
+    background-size: cover;
+    border-radius: 100%;
+    width: 200px; 
+    height: 200px;
+    margin-bottom: 20px; 
+}
+
+#name {
+    text-align: center;
+}
+
+#emoji {
+    display: inline-block;
+    font-size: 40px; /* Default font size */
+    animation: waving-hand 2.5s infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes waving-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#name p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #img {
+        width: 200px; /* Smaller size for mobile screens */
+        height: 200px;
+    }
+
+    #name p {
+        font-size: 24px; /* Smaller font size for mobile screens */
+    }
+
+    #emoji {
+        font-size: 30px; /* Adjusted size for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #img {
+        width: 170px; /* Even smaller size for very small screens */
+        height: 170px;
+    }
+
+    #name p {
+        font-size: 20px; /* Adjust font size further for very small screens */
+    }
+
+    #emoji {
+        font-size: 24px; /* Further adjusted size for very small screens */
+    }
+}
+/*------------------------about----------->*/
+#about {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#ab p {
+    font-size: 50px;
+    margin-bottom: 70px;
+}
+
+#abm {
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#abmg {
+    width: 50%;
+    height: 60vh;
+    margin-top: 35px;
+    background-image: url("02.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+}
+
+/* Ensure that the content stays within the boundaries of #info */
+#info {
+    width: 50%; /* Make the div responsive */
+    max-width: 600px; /* Set a maximum width to prevent overflow */
+    padding: 20px; /* Add some padding for better readability */
+    background-color:rgb(244, 235, 244); /* Background color to distinguish the box */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-left: 50px;
+    height:fit-content;
+}
+
+/* Adjust the font size and line height for better content fit */
+#info p {
+    font-size: 16px;
+    
+}
+
+
+#aboutme {
+    margin-top: 20px;
+    background-color: rgb(244, 235, 244);
+    width: 100%;
+    height: auto;
+}
+
+#aboutme p {
+    color: black;
+    font-size: larger;
+    background-color: transparent;
+}
+
+.tab-titles {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0 40px;
+    background-color: rgb(244, 235, 244);
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    background-color: rgb(244, 235, 244);
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(180, 11, 104);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul {
+    background-color: rgb(244, 235, 244);
+    height: auto;
+    width:100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    color: black;
+    background-color: rgb(244, 235, 244);
+}
+
+.tab-contents ul li span {
+    background-color: rgb(244, 235, 244);
+    font-size: 20px;
+    color: rgb(180, 11, 104);
+}
+
+.tab-contents {
+    display: none;
+    background-color: rgb(244, 235, 244);
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #abm {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #abmg {
+        display: none; /* Hide the image on small screens */
+    }
+
+    #info {
+        width: 82%;
+        height: 70%;
+        margin-left: 0;
+        margin-top: 20px;
+        
+    }
+
+    .tab-titles {
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: rgb(244, 235, 244);
+    }
+
+    .tab-links {
+        margin: 0 15px;
+        padding: 10px 0;
+        font-size: 16px;
+        background-color: rgb(244, 235, 244);
+    }
+
+    .tab-links.active-link {
+        border-bottom: 2px solid #db7093;
+    }
+
+    .tab-contents {
+        margin-top: 20px;
+        text-align: center;
+        background-color: rgb(244, 235, 244);
+    }
+
+    .tab-contents ul li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .tab-contents ul li span {
+        font-size: 16px;
+        color: #db7093;
+    }
+}
+
+/* Ensure consistent height on larger screens */
+@media (min-width: 1024px) {
+    #abm {
+        align-items: flex-start; /* Align items to the start for better consistency */
+    }
+
+    #abmg, #info {
+        height: 70vh; /* Consistent height adjustment */
+    }
+}
+/*------------------------Services----------->*/
+.servi{
+    height: auto;
+    text-align: center; 
+    padding: 20px 0;
+}
+.job-title{
+    margin-top: 20px;
+    font-size: 40px;
+}
+.services-list{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Added to wrap items on smaller screens */
+}
+.con{
+    height: auto;
+    width: 25%;
+    background-color: rgb(200, 177, 254);
+    padding: 25px;
+    font-size: 17px;
+    font-weight: 300;
+    border-radius: 4px;
+    margin: 20px 10px; /* Adjusted margin */
+    box-sizing: border-box;
+}
+.con span{
+    font-size: 30px;
+    background-color: rgb(200, 177, 254);
+}
+.icon{
+    background-color: rgb(200, 177, 254);
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.icon i{
+    font-size: 70px;
+    background-color: rgb(200, 177, 254);
+}
+.con p{
+    margin-top: 10px;
+    background-color: rgb(200, 177, 254);
+}
+/*----------------------Projects----------->*/
+/*----------------------Projects----------->*/
+
+.pro-title {
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+#project-list {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Added to wrap items on smaller screens */
+}
+
+.pro {
+    height: auto;
+    width: 25%;
+    border-radius: 10px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.pro img {
+    width: 100%; /* Adjusted to maintain image ratio */
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0; /* Default height */
+    background: linear-gradient(rgba(0,0,0,0.6), #743ae7);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s ease, opacity 0.5s ease; /* Added transition for opacity */
+    opacity: 0; /* Initially hidden */
+}
+
+.layer p {
+    background: none;
+}
+
+.layer h3 {
+    background: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer i {
+    background: none;
+    font-size: 30px;
+    margin-top: 20px;
+    color: #743ae7;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.pro:hover img {
+    transform: scale(1.1);
+}
+
+.pro:hover .layer {
+    height: 100%;
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .layer {
+        height: 100%; /* Automatically show layer on small screens */
+        opacity: 1; /* Fully visible */
+        transition: height 0.5s ease, opacity 0.5s ease; /* Smooth fade-in effect */
+    }
+}
+
+@media (max-width: 1200px) {
+    .con, .pro {
+        width: 45%; /* Adjust width for tablets and large phones */
+    }
+}
+
+@media (max-width: 768px) {
+    .job-title, .pro-title {
+        font-size: 30px;
+    }
+    .con, .pro {
+        width: 90%; /* Full width for small screens */
+    }
+    .services-list, #project-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-title, .pro-title {
+        font-size: 25px;
+    }
+    .icon i {
+        font-size: 50px;
+    }
+}
+/*-----------------contact---------------*/
+
+/* Container for the main content */
+#content {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Container for the contact section */
+#ccontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contact info box */
+#contactInfo {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 300px;
+    order: 2; /* Default order */
+}
+
+/* Contact details box */
+#contactDetails {
+    flex-basis: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 300px;
+    order: 1; /* Default order */
+}
+
+.pro-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contactInfo p {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#contactInfo p i {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+#so-icon {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#so-icon a {
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+/* Hover effect for social media links */
+#so-icon a:hover {
+    transform: translateY(-5px);
+}
+
+/* Button styling */
+#btn {
+    background-color: rgb(200, 177, 254);
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 14px 50px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+/* Hover effect for button */
+#btn:hover {
+    background: #743ae7;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #e6e0f8;
+    border: 1px solid #d4c1f3;
+    color: #333;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #743ae7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 200px;
+    align-self: center;
+}
+
+form button:hover {
+    background-color: #5a2dbd;
+}
+
+#msg {
+    color: white;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #contactInfo, #contactDetails {
+        flex-basis: 100%;
+    }
+
+    #contactDetails {
+        order: 1; /* Form comes first */
+    }
+
+    #contactInfo {
+        order: 2; /* Contact links come after form */
+    }
+
+    #btn {
+        padding: 10px 30px;
+    }
+
+    .pro-title {
+        font-size: 1.8em;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #so-icon a {
+        font-size: 24px;
+    }
+
+    #btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    form input, form textarea {
+        font-size: 0.9em;
+    }
+
+    .pro-title {
+        font-size: 1.5em;
+    }
+}
